@@ -1,10 +1,19 @@
 package shapes;
 
+
+/**
+ * @autor Александр
+ * @version 1.0
+ */
 public class Circle implements Shape {
 
     private double square;
     private String colour;
 
+    /**
+     * Площадь и цвет генерируються при создании экземпляра класса
+     * @see shapes.Shape
+     * */
     public Circle() {
         this.square = generateSquare();
         this.colour = generateColour();
