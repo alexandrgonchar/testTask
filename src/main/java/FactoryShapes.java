@@ -5,34 +5,34 @@ import java.util.ArrayList;
 public class FactoryShapes {
 
     private static Draw getShapeFromNumber(int number) {
-        Draw drawMathod = null;
+        Draw drawMethod = null;
 
         switch (number) {
             case 1:
-                drawMathod = new FoursquareDraw();
+                drawMethod = new FoursquareDraw();
                 break;
 
             case 2:
-                drawMathod = new TriangleDraw();
+                drawMethod = new TriangleDraw();
                 break;
             case 3:
-                drawMathod = new CircleDraw();
+                drawMethod = new CircleDraw();
                 break;
             case 4:
-                drawMathod = new TrapezeDraw();
+                drawMethod = new TrapezeDraw();
                 break;
         }
 
-        return drawMathod;
+        return drawMethod;
     }
 
     public static void main(String[] args) {
         ArrayList shapes = new ArrayList();
-        int countOfShapes = (int)(1 + Math.random() * 9);
+        int countOfShapes = (int)(1 + Math.random() * 10);
 
         for (int i = 0; i < countOfShapes; i++) {
 
-            int shapeNumber = (int)(1 + Math.random() * 3);
+            int shapeNumber = (int)(1 + Math.random() * 4);
             shapes.add(getShapeFromNumber(shapeNumber).draw());
             System.out.println(shapes.get(i));
         }

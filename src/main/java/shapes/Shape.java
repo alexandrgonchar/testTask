@@ -12,7 +12,7 @@ public interface Shape {
 
     default String generateColour() {
         String colour = "";
-        int colourIndex = (int)(1 + Math.random() * 6);
+        int colourIndex = (int)(1 + Math.random() * 7);
 
         switch (colourIndex) {
             case 1:
